@@ -19,6 +19,16 @@ class CategoriesController extends Controller
 
     public function index()
     {
-      dd($this->table->model(Category::class)->search()->rows());
+      $this->table
+      ->model(Category::class)
+      ->columns([
+        [
+          'label' => 'Nome',
+          'name' => 'name'
+        ]
+      ])
+      ->search();
+      return view('lista', ['table'=>$this->table]);
+
     }
 }

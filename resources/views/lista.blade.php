@@ -8,32 +8,7 @@
   </head>
   <body>
     <div class="container mt-4">
-      <table class="table table-borderless" id="example" class="display" style="width:100%">
-            <thead class="thead-dark">
-                <tr>
-                    <th scope="col">Name</th>
-                    <th scope="col">Position</th>
-                    <th scope="col">Office</th>
-                    <th scope="col">Age</th>
-                    <th scope="col">Start date</th>
-                    <th scope="col">Salary</th>
-                </tr>
-            </thead>
-            <tbody>
-              <?php foreach ($items as $item => $value): ?>
-
-
-              <tr>
-                  <td scope="row">{{$value['Name']}}</td>
-                  <td>{{$value['Position']}}</td>
-                  <td>{{$value['Office']}}</td>
-                  <td>{{$value['Age']}}</td>
-                  <td>{{$value['Start_date']}}</td>
-                  <td>{{$value['Salary']}}</td>
-              </tr>
-            <?php endforeach; ?>
-            </tbody>
-        </table>
+      @include('Table.table')
     </div>
     <script src="https://code.jquery.com/jquery-3.3.1.js"></script>
     <script src="https://cdn.datatables.net/1.10.20/js/jquery.dataTables.min.js"></script>
